@@ -1,6 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
+ import Main_dashboard from './Dashboard/Main_dashboard.tsx'
 import './index.css'
  import Main_forget_password from './Forget_password/Main_forget_password.tsx'
 import {
@@ -15,7 +16,11 @@ const router = createBrowserRouter([
 
   },
  
+  {
+    path: "dashboard",
+    element: <Main_dashboard />,
 
+  },
   
 
 
