@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
  import Main_forget_password from './Forget_password/Main_forget_password.tsx'
+  import Main_sign_uo from './Sign_Up/Main_sign_uo.tsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -15,7 +16,12 @@ const router = createBrowserRouter([
 
   },
  
+  {
+    path: "signUp",
+    element: <Main_sign_uo />,
 
+  },
+ 
   
 
 
