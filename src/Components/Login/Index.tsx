@@ -17,7 +17,7 @@ export default function Index() {
         object()
         .shape({
             number_phone: yup.number().required("Compo não pod estar Vazio"),
-            password: yup.string().required("Compo não pod estar Vazio"),
+            password: yup.string().required("Compo não pod estar Vazio"),   
 
         }).required()
     const { register, handleSubmit , formState: { errors },} = useForm<Inputs>({
@@ -27,15 +27,15 @@ export default function Index() {
              console.log(data)
       }
     return (
-        <div className=' bg-main_color w-1/4 h-1/2'>
+        <div className=' bg-main_color w-11/12 h-4/3 xl:w-1/3 md:w-1/2 lg:1/4'>
             <div className='flex flex-col justify-center items-center text-3xl font-bold mt-2'>
                 <CircleDollarSign size={70} className='text-white' />
                 <h1 className='mt-2 text-white'>Seja-BenVindo!</h1>
             </div>
-            <div className='w-full'>
+            <div className='w-full p-8'>
                 <form onSubmit={handleSubmit(onSubmit)}>
 
-                    <div className='flex flex-col items-center w-full mt-4'>
+                    <div className='flex flex-col items-center w-full '>
                         <div className=' w-11/12'> <label htmlFor="" className='text-white'>Número de Telefone</label></div>
 
                         <input 
@@ -44,19 +44,19 @@ export default function Index() {
                          bg-main_color mt-2 text-white border-solid border-whi
                          te outline-none' 
                          placeholder='Numero de Telefone'
-                         style={{ border: "1px solid #847D7D" }} {...register("number_phone")}/>
-            <p>{ errors.number_phone ? <div className='w-full bg-red-600'><p className='text-red-600 block w-full bg-red-600'>Erro</p></div>: ""}</p>
+                         style={{ border: "1px solid #847D7D"  }} {...register("number_phone")} required/>
+            <p className='w-11/12'>{ errors.number_phone?.type ? <div className='w-full  text-red-500'><p className='w-full'>*apenas Número de telefone</p></div>: ""}</p>
                     </div>
 
-                    <div className='flex flex-col items-center w-full mt-4'>
+                    <div className='flex flex-col items-center w-full '>
                         <div className=' w-11/12'> <label htmlFor="" className='text-white'>Palavra-passe</label></div>
 
                         <input type="password"
                          className='w-11/12 p-3 bg-main_color
                           mt-2 text-white border-solid border-white 
                           outline-none' placeholder='palavra-passe
-                          ' style={{ border: "1px solid #847D7D" }} {...register("password")}/>
-
+                          ' style={{ border: "1px solid #847D7D" }} {...register("password")} required/>
+ 
                     </div>
                     <div className='w-full flex justify-center mt-4'><button className='bg-second_color text-white w-11/12 p-3'>Entrar</button></div>
                     <div className='w-11/12 flex justify-end text-second_color mt-2 ml-5'> <p>Esqueceu a sua Palavra-passe ?</p></div>
