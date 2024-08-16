@@ -2,8 +2,9 @@ import React from 'react'
 import { Trash } from 'lucide-react'
 export default function Table() {
   return (
-    <div className='w-full flex mt-5 justify-center '>
-        <table className='w-11/12 text-center bg-main_color table-auto p-4'>
+    <div className='w-full flex flex-col mt-5 justify-center items-center  '>
+       <div className='w-11/12 flex justify-end'>  <input type="text" className='p-1 bg-main_color text-white border outline-none' placeholder='pesquisar' /></div>
+        <table className='w-11/12 text-center bg-main_color table-auto p-4 mt-1'>
             <thead className='h-1/2 '  style={{borderBottom:" 1px solid #2E2E2E"}}>
                 <th className='p-3'>Descrição</th>
                 <th>Valor</th>
