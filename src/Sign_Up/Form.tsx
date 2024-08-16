@@ -5,13 +5,13 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 export default function Form() {
     type inputFieds = {
-        telephone: number
+        email: string
         username: string
         passWord: string
         confPassword: string
     }
     const schema = yup.object().shape({
-        telephone: yup.number().required(),
+        email: yup.string().email().required(),
         username: yup.string().required(),
         passWord: yup.string().length(8).required(),
         confPassword: yup.string().length(8).required()
@@ -37,8 +37,8 @@ export default function Form() {
                             <div className='xl:flex justify-center mt-2'>
 
                                 <div className='  flex flex-col mt-2 xl:w-1/2'>
-                                    <label htmlFor="">Número de Telefone</label>
-                                    <input type="text" placeholder='951051700' className='p-3 bg-main_color xl: mt-2' style={{ border: "1px solid #847D7D", outline: "none" }} {...register("telephone")} required maxLength={9} />
+                                    <label htmlFor="">Email</label>
+                                    <input type="email" placeholder='danie@gmail.com' className='p-3 bg-main_color xl: mt-2' style={{ border: "1px solid #847D7D", outline: "none" }} {...register("telephone")} required maxLength={9} />
 
                                 </div>
                                 <div className='  flex flex-col mt-2 xl:w-1/2 xl:ml-5'>
