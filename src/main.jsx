@@ -4,9 +4,14 @@ import App from './App.tsx'
  import Main_dashboard from './Dashboard/Main_dashboard.tsx'
 import './index.css'
 
-=======
+
  import Main_forget_password from './Forget_password/Main_forget_password.tsx'
+
+  import Main_OTP_Verify from './OTP_Verify/Main_OTP_Verify.tsx'
+   import Main_New_Password from './New_Password/Main_New_Password.tsx'
+
  import Perfil from './Perfil-user/Perfil.tsx'
+
 
 import {
   createBrowserRouter,
@@ -22,6 +27,17 @@ const router = createBrowserRouter([
 
   },
   {
+
+    path: "OTP",
+    element: <Main_OTP_Verify />,
+
+  },
+  {
+    path: "New-Password",
+    element: <Main_New_Password />,
+
+  },
+=======
     path: "forgetpassword",
     element: <Main_forget_password />,
 
@@ -35,6 +51,7 @@ const router = createBrowserRouter([
   {
     path: "dashboard",
     element: <Main_dashboard />,
+
 
   },
   
