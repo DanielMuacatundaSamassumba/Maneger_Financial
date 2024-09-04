@@ -1,14 +1,19 @@
 import React from 'react'
 
+
+
+
 import { CircleDollarSign } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 
 
+
 import {CircleDollarSign} from 'lucide-react'
 
 // import {} from ''
+
 
 
 export default function Form() {
@@ -26,6 +31,8 @@ export default function Form() {
     console.log(data)
   }
   return (
+
+
 
     <div className='bg-main_color p-10 text-white w-11/12  p-3 xl:w-1/3 lg:w-1/2 md:1/2'>
 
@@ -45,10 +52,13 @@ export default function Form() {
         </div>
       </div>
 
+
+
     <div className='bg-main_color text-white w-11/12 h-1/3'>
         
 
         <CircleDollarSign/>
+
 
 
     </div>
