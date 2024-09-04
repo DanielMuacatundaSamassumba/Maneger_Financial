@@ -7,10 +7,14 @@ import './index.css'
 
  import Main_forget_password from './Forget_password/Main_forget_password.tsx'
 
+  import Main_sign_uo from './Sign_Up/Main_sign_uo.tsx'
+=======
+
   import Main_OTP_Verify from './OTP_Verify/Main_OTP_Verify.tsx'
    import Main_New_Password from './New_Password/Main_New_Password.tsx'
 
  import Perfil from './Perfil-user/Perfil.tsx'
+
 
 
 import {
@@ -49,11 +53,19 @@ const router = createBrowserRouter([
   },
  
   {
+
+    path: "signUp",
+    element: <Main_sign_uo />,
+
+  },
+ 
+
     path: "dashboard",
     element: <Main_dashboard />,
 
 
   },
+
   
 
 
