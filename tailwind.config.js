@@ -6,7 +6,10 @@ export default {
   ],
   theme: {
     extend: {
-       colors:{
+
+
+      colors:{
+
         background:"#121214",
         main_color:"#202024",
          second_color:"#00875F",
