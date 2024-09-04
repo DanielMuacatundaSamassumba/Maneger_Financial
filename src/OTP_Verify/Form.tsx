@@ -3,6 +3,7 @@ import { CircleDollarSign } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { Link } from 'react-router-dom'
 export default function Form() {
      type Input = {
           otp_Number: number
@@ -36,8 +37,8 @@ export default function Form() {
                               className='w-11/12 p-3 bg-main_color  outline-none mt-2 ' style={{ border: "1px solid #847D7D" }} placeholder='00-00-00' {...register("otp_Number")}
                                required maxLength={6} />
                               <p className='w-11/12 mt-2'>{errors.otp_Number?.message ? <div className=' text-red-500'><p className='w-full'>* Apenas Número</p></div> : ""}</p>
-                              <div className='w-4/5  flex justify-center p-3'><button className='bg-second_color w-full p-3 mt-2'>Confirmar</button></div>
-                              <div className='text-second_color p-5'>Ja tem uma Conta? Faça o Login</div>
+                              <div className='w-4/5  flex justify-center p-3'> <Link to={'/new-password'}><button className='bg-second_color w-full p-3 mt-2'>Confirmar</button></Link></div>
+                              <div className='text-second_color p-5'><Link to={'/'}>Ja tem uma Conta? Faça o Login</Link></div> 
                          </form>
                     </div>
                </div>

@@ -4,7 +4,10 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
 import { CircleDollarSign } from 'lucide-react'
+import { useNavigate } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 export default function Index() {
+    const navigate = useNavigate();
     type Inputs = {
         email: string
         password: string
@@ -25,7 +28,9 @@ export default function Index() {
     })
     function onSubmit(data: FieldValues) {
         console.log(data)
-         alert("Login sucess!")
+
+         navigate("/dashboard")
+ 
     }
     return (
         <div className=' bg-main_color w-11/12 h-4/3 xl:w-1/3 md:w-1/2 lg:1/4'>
@@ -60,8 +65,8 @@ export default function Index() {
 
                     </div>
                     <div className='w-full flex justify-center mt-4'><button className='bg-second_color text-white w-11/12 p-3'>Entrar</button></div>
-                    <div className='w-11/12 flex justify-end text-second_color mt-2 ml-5'> <p>Esqueceu a sua Palavra-passe ?</p></div>
-                    <div className='w-11/12 flex justify-center text-second_color mt-2 '> <p>Esqueceu a sua Palavra-passe ?</p></div>
+                    <div className='w-11/12 flex justify-end text-second_color mt-2 ml-5'> <Link to={'forgetpassword'}>Esqueceu a sua Palavra-passe ?</Link> <p></p></div>
+                    <div className='w-11/12 flex justify-center text-second_color mt-2 '> <Link to={'signup'}> Ainda não tem Conta ?</Link></div>
                 </form>
 
             </div>

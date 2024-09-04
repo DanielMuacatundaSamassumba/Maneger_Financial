@@ -2,6 +2,7 @@ import React from 'react'
 import { CircleDollarSign } from "lucide-react"
 import { useForm } from 'react-hook-form'
 import { yupResolver } from "@hookform/resolvers/yup"
+import { Link } from 'react-router-dom'
 import * as yup from "yup"
 export default function Form() {
     type inputFieds = {
@@ -24,7 +25,7 @@ export default function Form() {
 
 
     }
-    const users = "daniel"
+
 
     return (
         <div className='bg-main_color text-white w-11/12 xl:w-1/2  p-4'>
@@ -38,7 +39,7 @@ export default function Form() {
 
                                 <div className='  flex flex-col mt-2 xl:w-1/2'>
                                     <label htmlFor="">Email</label>
-                                    <input type="email" placeholder='danie@gmail.com' className='p-3 bg-main_color xl: mt-2' style={{ border: "1px solid #847D7D", outline: "none" }} {...register("telephone")} required maxLength={9} />
+                                    <input type="email" placeholder='danie@gmail.com' className='p-3 bg-main_color xl: mt-2' style={{ border: "1px solid #847D7D", outline: "none" }} {...register("email")} required maxLength={9} />
 
                                 </div>
                                 <div className='  flex flex-col mt-2 xl:w-1/2 xl:ml-5'>
@@ -62,7 +63,7 @@ export default function Form() {
                         </div>
                     </div>
                     <div className='flex justify-center p-5'> <button className='bg-second_color p-2 mt-2 w-2/3 xl:w-1/3'>Cadastrar</button></div>
-                    <div className='w-full flex justify-center text-second_color'>Ja tem uma Conta? Faça o Login</div>
+                    <div className='w-full flex justify-center text-second_color'><Link to={'/'}>Ja tem uma Conta? Faça o Login</Link></div> 
                 </form>
             </div>
         </div>

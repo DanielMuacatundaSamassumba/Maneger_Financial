@@ -38,7 +38,7 @@ export default function UpdateUser({ isopen }) {
                     <div>
                         <div className='flex flex-col'>
                             <label htmlFor="">Email</label>
-                            <input type="email" name="" id="" className='p-3 mt-2 outline-none bg-black' placeholder='Email'  {...register("email")}/>
+                            <input type="email"  id="" className='p-3 mt-2 outline-none bg-black' placeholder='Email'  {...register("email")}/>
                         </div>
                         <div className='flex flex-col'>
                             <label htmlFor="">Nome Completo</label>
@@ -48,11 +48,11 @@ export default function UpdateUser({ isopen }) {
                     <div>
                         <div className='flex flex-col mt-2'>
                             <label htmlFor="">Palavra-passe</label>
-                            <input type="text" name="" id="" className='p-3 mt-2 outline-none bg-black' placeholder='Palavra-passe' {...register("password")} />
+                            <input type="text"  id="" className='p-3 mt-2 outline-none bg-black' placeholder='Palavra-passe' {...register("password")} />
                         </div>
                         <div className='flex flex-col mt-2'>
                             <label htmlFor="">Confirmar a sua Palavra-pase</label>
-                            <input type="text" name="" id="" className='p-3 mt-2 outline-none bg-black' placeholder='Confirmar a sua Palavra-pase' {...register("passwordConf")} />
+                            <input type="text"  id="" className='p-3 mt-2 outline-none bg-black' placeholder='Confirmar a sua Palavra-pase' {...register("passwordConf")} />
                         </div>
                     </div>
                     <div className='flex justify-center mt-2'>

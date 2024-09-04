@@ -3,6 +3,7 @@ import { CircleDollarSign } from 'lucide-react'
 import { useForm } from 'react-hook-form'
 import { yupResolver } from "@hookform/resolvers/yup"
 import * as yup from "yup"
+import { Link } from 'react-router-dom'
 export default function Form() {
     type Input = {
         new_password: string
@@ -37,7 +38,9 @@ export default function Form() {
                         <input type="text"
                             className='w-11/12 p-3 bg-main_color  outline-none mt-2 ' style={{ border: "1px solid #847D7D" }} placeholder='Confirme aNova Senha'  {...register("conf_new_password")} required />
  <p className='w-11/12'>{ errors.conf_new_password ? <div className='w-full '><p className='text-red-600 block w-full '>* O compo deve conter até 8 caracteres</p></div>: ""}</p>
-                        <div className='w-3/5  flex justify-center p-5'><button className='bg-second_color w-full p-3 mt-2'>Confirmar</button></div>
+                        <div className='w-3/5  flex justify-center p-5'>
+                         <Link to={'/'}> <button className='bg-second_color w-full p-3 mt-2'>Confirmar</button></Link>
+                        </div>
 
                     </form>
                 </div>
