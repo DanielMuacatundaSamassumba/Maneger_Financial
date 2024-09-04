@@ -27,8 +27,8 @@ export default function DataUser() {
             <div className='text-white w-11/12 bg-main_color h-2/5 p-3 lg:w-1/2'>
                 <div className='flex flex-col justify-center mt-3 items-center '>
                  
-                    <label htmlFor="fileInput" className='w-1/2 flex justify-center'>
-                    <img src={imagepreview} alt="" className='border-2 rounded-full p-6 w-1/4' />
+                    <label htmlFor="fileInput" className='w-1/2 lg:w-1/2 flex justify-center'>
+                    <img src={imagepreview} alt="" className='border-2 rounded-full p-6 w-1/2 lg:w-1/4' />
                     </label>
                     <input type="file" id="fileInput" name="fileInput" className='hidden' onChange={handleiumage}/>
                     <div>
