@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
  import Main_forget_password from './Forget_password/Main_forget_password.tsx'
+ import Perfil from './Perfil-user/Perfil.tsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -12,6 +13,16 @@ const router = createBrowserRouter([
   {
     path: "forgetpassword",
     element: <Main_forget_password />,
+
+  },
+  {
+    path: "forgetpassword",
+    element: <Main_forget_password />,
+
+  },
+  {
+    path: "perfil",
+    element: <Perfil />,
 
   },
  
